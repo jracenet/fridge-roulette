@@ -1,10 +1,12 @@
 import React from 'react'
+import RecipeSearcher from './RecipeSearcher'
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        Hello world!
+        <h1>Fridge Roulette</h1>
+        <RecipeSearcher />
       </div>
     )
   }
