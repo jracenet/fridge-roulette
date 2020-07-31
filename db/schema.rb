@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_091503) do
+ActiveRecord::Schema.define(version: 2020_07_31_113131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "raw_marmiton_entry"
+    t.integer "recipe_id"
+    t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
+  end
 
   create_table "recipes", force: :cascade do |t|
     t.string "name"
   end
 
+  add_foreign_key "ingredients", "recipes", on_delete: :cascade
 end
