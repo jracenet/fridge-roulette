@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
   def search_by_ingredients
-    render json: {}, status: :ok
+    render json: { recipes: [] }, status: :ok
   end
 end
