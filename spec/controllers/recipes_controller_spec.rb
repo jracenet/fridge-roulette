@@ -6,13 +6,17 @@ RSpec.describe RecipesController, type: :controller do
 
     let(:recipes) { create_list(:recipe, 25) }
 
+    before do
+      recipes
+    end
+
     it { is_expected.to have_http_status(:success)}
 
     it 'returns all recipes' do
       subject
 
       recipes_response = JSON.parse(response.body)
-      expect(recipes_response['recipes']).to be_empty
+      expect(recipes_response['recipes']).to eq recipes.as_json
     end
   end
 end
