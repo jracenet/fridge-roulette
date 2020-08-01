@@ -27,7 +27,9 @@ export default class RecipeSearcher extends React.Component {
     })
 
     this.setState({
-      recipesList: res.recipes
+      recipesList: res.data.recipes
     })
+
+
   }
 }
