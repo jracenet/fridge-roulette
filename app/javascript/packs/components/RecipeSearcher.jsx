@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import IngredientsList from './IngredientsList'
 import RecipesList from './RecipesList'
 
 export default class RecipeSearcher extends React.Component {
@@ -13,8 +14,8 @@ export default class RecipeSearcher extends React.Component {
 
   render() {
     return (
-      <div>
-        <input onBlur={this.triggerSearch}></input>
+      <div className="app-main">
+        <IngredientsList search={this.triggerSearch} />
         <RecipesList recipes={this.state.recipesList} />
       </div>
     )

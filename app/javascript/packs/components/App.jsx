@@ -1,11 +1,11 @@
 import React from 'react'
 import RecipeSearcher from './RecipeSearcher'
+import 'packs/styles/App.sass'
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Fridge Roulette</h1>
+      <div className="app-wrapper">
         <RecipeSearcher />
       </div>
     )
