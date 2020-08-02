@@ -15,7 +15,7 @@ export default class IngredientsList extends React.Component {
   render() {
     return (<div className="ingredients-list">
       <h2>Dans mon frigo</h2>
-      <input value={this.newIngredientValue}
+      <input value={this.state.newIngredientValue}
         onChange={(e) => { this.setState({ newIngredientValue: e.target.value }) }} />
       <button onClick={this.onAddIngredient}>+</button>
 
