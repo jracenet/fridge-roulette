@@ -1,7 +1,9 @@
+require "i18n"
+
 class RecipesController < ApplicationController
   def search_by_ingredients
-    query = params[:query]
-    matches = Recipe.joins(:ingredients).where('ingredients.raw_marmiton_entry LIKE :query', query: "%#{query}%")
+    query = I18n.transliterate(params[:query])
+    matches = Recipe.search_by_ingredient(query).uniq
 
     render json: { recipes: matches }, status: :ok
   end
