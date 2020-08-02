@@ -8,7 +8,8 @@ export default class IngredientsList extends React.Component {
       ingredients: []
     }
 
-    this.onAddIngredient = this.addIngredient.bind(this)
+    this.onClick = this.handleClick.bind(this)
+    this.onEnter = this.handleKeyPress.bind(this)
     this.onRemoveIngredient = this.removeIngredient.bind(this)
   }
 
@@ -16,8 +17,10 @@ export default class IngredientsList extends React.Component {
     return (<div className="ingredients-list">
       <h2>Dans mon frigo</h2>
       <input value={this.state.newIngredientValue}
-        onChange={(e) => { this.setState({ newIngredientValue: e.target.value }) }} />
-      <button onClick={this.onAddIngredient}>+</button>
+        onChange={(e) => { this.setState({ newIngredientValue: e.target.value }) }}
+        onKeyPress={this.onEnter}
+      />
+      <button onClick={this.onClick}>+</button>
 
       <ul>
         {this.selectedIngredients()}
@@ -25,9 +28,19 @@ export default class IngredientsList extends React.Component {
     </div>)
   }
 
-  addIngredient(e) {
+  handleClick(e) {
     e.preventDefault()
+    this.addIngredient()
+  }
 
+  handleKeyPress(e) {
+    if (e.key === 'Enter') {
+      this.addIngredient()
+      e.preventDefault()
+    }
+  }
+
+  addIngredient() {
     this.state.ingredients.push(this.state.newIngredientValue.repeat(1))
     this.setState({ newIngredientValue: '' })
 
