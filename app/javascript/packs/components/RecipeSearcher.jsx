@@ -21,8 +21,7 @@ export default class RecipeSearcher extends React.Component {
     )
   }
 
-  async search(e) {
-    const query = e.target.value
+  async search(query) {
     const res = await axios.get('/recipes/search', {
       params: { query }
     })

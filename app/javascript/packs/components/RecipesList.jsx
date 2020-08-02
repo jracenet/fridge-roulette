@@ -6,8 +6,8 @@ export default class RecipesList extends React.Component {
       <li key={recipe.id}>{recipe.name}</li>
     )
 
-    return <div class="recipes-list">
-      <h2>Recette possibles</h2>
+    return <div className="recipes-list">
+      <h2>Recettes possibles</h2>
       <ul>
         {recipeElements}
       </ul>
