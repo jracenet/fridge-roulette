@@ -17,6 +17,20 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@testing-library/dom": "^7.21.7",
+    "@testing-library/react": "^10.4.7",
+    "@testing-library/user-event": "^12.1.0",
+    "jest": "^26.2.2",
     "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-debug": "node --inspect node_modules/.bin/jest --runInBand"
+  },
+  "jest": {
+    "roots": [
+      "app/javascript/packs"
+    ]
   }
 }

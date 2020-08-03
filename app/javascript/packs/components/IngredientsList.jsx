@@ -19,12 +19,13 @@ export default class IngredientsList extends React.Component {
       <fieldset className="ingredient-adder">
         <div className="form-group">
           <input
+            data-testid="add-ingredient"
             placeholder="Tapez le nom d'un ingrédient ici"
             value={this.state.newIngredientValue}
             onChange={(e) => { this.setState({ newIngredientValue: e.target.value }) }}
             onKeyPress={this.onEnter}
           />
-          <button onClick={this.onClick}>Ajouter</button>
+          <button onClick={this.onClick} data-testid="add-ingredient-btn">Ajouter</button>
         </div>
       </fieldset>
       <ul className="ingredients-added">
@@ -58,16 +59,18 @@ export default class IngredientsList extends React.Component {
 
   removeIngredient(index) {
     this.state.ingredients.splice(index, 1)
-
     this.props.search(this.state.ingredients.join(','))
   }
 
   selectedIngredients() {
     return (
       this.state.ingredients.map((ingredient, index) =>
-        <li key={ingredient}>
+        <li key={ingredient} data-testid="added-ingredient">
           {ingredient}
-          <button onClick={(e) => { this.removeIngredient(index) }}>Enlever</button>
+          <button
+            onClick={(e) => { this.removeIngredient(index) }}
+            data-testid="remove-ingredient"
+          >Enlever</button>
         </li>
       )
     )
