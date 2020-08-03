@@ -1,29 +1,32 @@
 @import 'Reset'
-@import "IngredientsList"
-
+@import 'Colors'
+@import 'IngredientsList'
+@import 'RecipesList'
 html, body
   width: 100%
   max-width: 100%
   height: 100%
   font-family: 'Roboto', sans-serif
   font-weight: 300
+  background-color: $grey-bg
 
 h2
   margin-top: 20px
   padding-bottom: 25px
   font-weight: 500
+  color: $marmiton-orange
 
 button, input
   border: 0
 
 .app-wrapper
-  padding: 0 20px
+  padding: 20px
 
 .app-main
   display: grid
   grid-template-columns: 25% 1fr
   grid-gap: 40px
-  padding: 20px 0
+  background-color: white
 
 ul
   padding-left: 0

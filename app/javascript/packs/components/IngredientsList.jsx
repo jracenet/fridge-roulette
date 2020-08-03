@@ -5,7 +5,7 @@ export default class IngredientsList extends React.Component {
     super(props)
     this.state = {
       newIngredientValue: '',
-      ingredients: ['oignon', 'beurre']
+      ingredients: []
     }
 
     this.onClick = this.handleClick.bind(this)

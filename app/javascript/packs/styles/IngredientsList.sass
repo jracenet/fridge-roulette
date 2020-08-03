@@ -1,6 +1,9 @@
+@import "Colors"
+
 .ingredients-list
   width: 100%
   height: 100%
+  padding: 20px
   button
     padding: 10px
     border-radius: 3px
@@ -24,15 +27,15 @@
 
         &:focus
           outline: none
-          border-color: orange
+          border-color: $marmiton-orange
       & > button
         padding-left: 20px
         padding-right: 20px
         border-radius: 0 3px 3px 0
-        border-top: solid 1px orange
-        border-right: solid 1px orange
-        border-bottom: solid 1px orange
-        background-color: orange
+        border-top: solid 1px $marmiton-orange
+        border-right: solid 1px $marmiton-orange
+        border-bottom: solid 1px $marmiton-orange
+        background-color: $marmiton-orange
         color: white
   & > .ingredients-added
     & > li
