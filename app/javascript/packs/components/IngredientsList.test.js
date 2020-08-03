@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, within, waitForElementToBeRemoved } from '@testing-library/react'
+import { render, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import IngredientsList from './IngredientsList'
 
