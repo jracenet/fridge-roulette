@@ -1,24 +1,19 @@
-# README
+# Fridge Roulette
+This application allows you to find recipes ideas based on what's remain in your fridge (or closet or whatever)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It's available on https://fridge-roulette.herokuapp.com/
 
-Things you may want to cover:
+## Pre-requisites
+- Ruby 2.6.2 + bundle
+- Yarn
+- Node.js
 
-* Ruby version
+## Build app
+- Run Bundle to install dependencies `bundle install`
+- Prepare database: `bin/rails db:migrate`
+- Fill database with Marmiton extract data: `bin/rails import_recipes`
+- `bin/rails s` and it's up and running!
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run tests
+- Backend tests: `bin/rspec`
+- Frontend tests: `npm run test`
