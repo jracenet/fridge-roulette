@@ -5,7 +5,7 @@ export default class IngredientsList extends React.Component {
     super(props)
     this.state = {
       newIngredientValue: '',
-      ingredients: []
+      ingredients: ['oignon', 'beurre']
     }
 
     this.onClick = this.handleClick.bind(this)
@@ -15,14 +15,19 @@ export default class IngredientsList extends React.Component {
 
   render() {
     return (<div className="ingredients-list">
-      <h2>Dans mon frigo</h2>
-      <input value={this.state.newIngredientValue}
-        onChange={(e) => { this.setState({ newIngredientValue: e.target.value }) }}
-        onKeyPress={this.onEnter}
-      />
-      <button onClick={this.onClick}>+</button>
-
-      <ul>
+      <h2>Mon frigo</h2>
+      <fieldset className="ingredient-adder">
+        <div className="form-group">
+          <input
+            placeholder="Tapez le nom d'un ingrédient ici"
+            value={this.state.newIngredientValue}
+            onChange={(e) => { this.setState({ newIngredientValue: e.target.value }) }}
+            onKeyPress={this.onEnter}
+          />
+          <button onClick={this.onClick}>Ajouter</button>
+        </div>
+      </fieldset>
+      <ul className="ingredients-added">
         {this.selectedIngredients()}
       </ul>
     </div>)
@@ -41,6 +46,10 @@ export default class IngredientsList extends React.Component {
   }
 
   addIngredient() {
+    if (this.state.newIngredientValue.trim() === "") {
+      return
+    }
+
     this.state.ingredients.push(this.state.newIngredientValue.repeat(1))
     this.setState({ newIngredientValue: '' })
 
@@ -58,7 +67,7 @@ export default class IngredientsList extends React.Component {
       this.state.ingredients.map((ingredient, index) =>
         <li key={ingredient}>
           {ingredient}
-          <button onClick={(e) => { this.removeIngredient(index) }}>X</button>
+          <button onClick={(e) => { this.removeIngredient(index) }}>Enlever</button>
         </li>
       )
     )

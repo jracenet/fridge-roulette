@@ -7,7 +7,7 @@ export default class RecipesList extends React.Component {
     )
 
     return <div className="recipes-list">
-      <h2>Recettes possibles</h2>
+      <h2>Suggestions de recette</h2>
       <ul>
         {recipeElements}
       </ul>
