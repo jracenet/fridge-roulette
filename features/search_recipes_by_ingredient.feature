@@ -11,6 +11,10 @@ Feature: Search recipes by ingredients
 
 
   Scenario: Read the details of a recipe
+    As a not inspired cooker
+    I want to have all information about a suggested recipe
+    So I can check if I have all the ingredients and time to make it
+
     Given these suggested recipes
       | Ratatouille |
       | Piperade    |
