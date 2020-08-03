@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: fridge_roulette_production
-  username: fridge_roulette
+  url: <%= ENV['DATABASE_URL'] %>
+  database: de0nvqa3auhkb7
+  username: erjfbwqsisbsak
   password: <%= ENV['FRIDGE_ROULETTE_DATABASE_PASSWORD'] %>
