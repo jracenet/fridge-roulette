@@ -15,12 +15,17 @@ export default class IngredientsList extends React.Component {
 
   render() {
     return (<div className="ingredients-list">
-      <h2>Mon frigo</h2>
+      <h2>Mes ingrédients</h2>
+
+      <ul className="ingredients-added">
+        {this.selectedIngredients()}
+      </ul>
+
       <fieldset className="ingredient-adder">
         <div className="form-group">
           <input
             data-testid="add-ingredient"
-            placeholder="Tapez le nom d'un ingrédient ici"
+            placeholder="Ajouter un ingrédient (ex: farine, beurre, courgette...)"
             value={this.state.newIngredientValue}
             onChange={(e) => { this.setState({ newIngredientValue: e.target.value }) }}
             onKeyPress={this.onEnter}
@@ -28,9 +33,6 @@ export default class IngredientsList extends React.Component {
           <button onClick={this.onClick} data-testid="add-ingredient-btn">Ajouter</button>
         </div>
       </fieldset>
-      <ul className="ingredients-added">
-        {this.selectedIngredients()}
-      </ul>
     </div>)
   }
 
