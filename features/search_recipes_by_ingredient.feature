@@ -4,7 +4,7 @@ Feature: Search recipes by ingredients
     I want to find recipes based on what I have in my fridge
     So I have some inspiration to cook a meal tonight
 
-    When I search for recipes containing "Peppers, tomatoes"
+    When I search for recipes containing "pepper, tomato"
     Then these recipes should be suggested
       | Ratatouille |
       | Piperade    |

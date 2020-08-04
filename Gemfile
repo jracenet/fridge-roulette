@@ -36,6 +36,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'ffaker'
   gem 'pry'
+  gem 'rspec-expectations'
 end
 
 group :development do
@@ -51,6 +52,7 @@ end
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem "watir-rails"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
