@@ -31,12 +31,15 @@ button, input
 
 
 .app-main
-  display: grid
-  grid-template-columns: 30% 1fr
-  grid-gap: 40px
   background-color: white
   border-radius: 5px
   border: solid 1px lightgray
+
+@media screen and (min-width: 768px)
+  .app-main
+    display: grid
+    grid-template-columns: 30% 1fr
+    grid-gap: 40px
 
 ul
   padding-left: 0
