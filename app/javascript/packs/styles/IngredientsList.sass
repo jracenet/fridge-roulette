@@ -1,8 +1,12 @@
 @import "Colors"
+@import 'Responsive'
 
 .ingredients-list
   height: 100%
   padding: 10px 20px 20px
+  @include mobile
+    padding: 10px
+
   button
     padding: 10px
     border-radius: 3px
@@ -12,6 +16,9 @@
     margin-top: 5px
     padding-bottom: 5px
     padding-right: 10px
+    @include mobile
+      padding-right: 0
+
     & > .form-group
       display: flex
       & > input,
@@ -42,3 +49,5 @@
       justify-content: space-between
       align-items: center
       padding-right: 10px
+      @include mobile
+        padding-right: 0
