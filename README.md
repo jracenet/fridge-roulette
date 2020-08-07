@@ -17,4 +17,4 @@ It's available on https://fridge-roulette.herokuapp.com/
 ## Run tests
 - Backend tests: `bin/rspec`
 - Frontend tests: `npm run test`
-- Cucumber features: `bin/rails cucumber
+- Cucumber features: `bin/rails cucumber`
