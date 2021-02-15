@@ -1,1 +1,2 @@
 Feature: Hello
+Scenario: pouet
