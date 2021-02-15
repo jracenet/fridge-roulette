@@ -1,2 +1,1 @@
-Feature: my feature
-Scenario: polop
+Feature: Hello
