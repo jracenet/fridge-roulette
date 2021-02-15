@@ -1,2 +1,1 @@
-Feature: Hello
-Scenario: pouet
+Feature: Hello it's-a-me
