@@ -1,1 +1,2 @@
-Feature: Hello it's-a-me
+Feature: it's a me
+Scenario: coucou
