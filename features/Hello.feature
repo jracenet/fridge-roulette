@@ -1,2 +1,1 @@
-Feature: it's a me
-Scenario: coucou
+Feature: This is my feature
