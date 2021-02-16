@@ -1,1 +1,1 @@
-Feature: This is my feature
+Feature: Hello
