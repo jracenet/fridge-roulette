@@ -8,6 +8,7 @@ Feature: Search recipes by ingredients
     Then these recipes should be suggested
       | Ratatouille |
       | Piperade    |
+      | POUET |
 
   Scenario: Read the details of a recipe
     As a not inspired cooker
