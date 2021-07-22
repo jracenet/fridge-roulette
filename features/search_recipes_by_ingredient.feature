@@ -8,6 +8,7 @@ Feature: Search recipes by ingredients
     Then these recipes should be suggested
       | Ratatouille |
       | Piperade    |
+      | fajitas     |
 
 
   Scenario: Read the details of a recipe
