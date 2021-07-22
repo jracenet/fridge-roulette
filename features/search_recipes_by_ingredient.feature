@@ -20,4 +20,3 @@ Feature: Search recipes by ingredients
       | Piperade    |
     When I open the "Ratatouille" recipe
     Then I should get all the information to cook it
-    And It should be delicious
