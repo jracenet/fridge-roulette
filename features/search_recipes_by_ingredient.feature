@@ -1,4 +1,4 @@
-Feature: Search recipes by ingredients
+Feature: Search recipes
   Scenario: Find recipes by ingredient
     As a not inspired cooker
     I want to find recipes based on what I have in my fridge
