@@ -18,5 +18,4 @@ Feature: Search recipes
       | Ratatouille |
       | Piperade    |
     When I open the "Ratatouille" recipe
-    Then I should get all the information to cook it  
-    And blabla
+    Then I should get all the information to cook it 
