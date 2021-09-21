@@ -19,4 +19,5 @@ Feature: Search recipes
       | Piperade    |
     When I open the "Ratatouille" recipe
     Then I should get all the information to cook it
+    And thing
         
